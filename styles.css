@@ -74,8 +74,8 @@ td { }
 a { color: gray; text-decoration: none; }
 
 .hoverable:hover {
-    background-color: #ffc0cb; 
-  // background-color: #add8e6;
+/*   //  background-color: #ffc0cb;  */
+  background-color: #add8e6;
 }
 
 #content-container {
