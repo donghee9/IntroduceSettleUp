@@ -1,148 +1,96 @@
 #invoice-POS {
-  box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
-  padding: 2mm;
-  margin: 0 auto;
-  width: 80mm;
-  max-width: 100%;
-  height: auto;
-  max-height: 297mm; /* A4 paper height */
-  background: rgb(255, 255, 255)
-    url(https://static.licdn.com/scds/common/u/images/apps/payments/textures/texture_paper_304x128_v1.png) repeat scroll
-    0px 0px / auto padding-box border-box;
-  position: relative;
-  overflow: hidden;
-  transition: width 0.3s ease-in-out;
+    box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
+    padding: 3mm;
+    margin: 0 auto;
+    width: 100mm;
+    max-width: 100%;
+    height: auto;
+    max-height: 297mm; /* A4 paper height */
+    background: rgb(255, 255, 255) url(https://static.licdn.com/scds/common/u/images/apps/payments/textures/texture_paper_304x128_v1.png) repeat scroll 0px 0px / auto padding-box border-box;
+    position: relative;
+    overflow: hidden;
+    transition: width 0.3s ease-in-out;
 }
 
 #invoice-POS:after {
-  background-position: 0px 0px;
-  bottom: -8px;
-  color: rgb(102, 102, 102);
-  height: 10px;
-  left: 0px;
-  position: absolute;
-  width: 288px;
-  perspective-origin: 144px 5px;
-  transform-origin: 144px 5px;
-  content: " ";
-  background: rgba(0, 0, 0, 0)
-    url(https://static.licdn.com/scds/common/u/images/apps/payments/textures/texture_paper_zigzag_288x18_v1.png)
-    repeat-x scroll 0px 0px / auto padding-box border-box;
-  border: 0px none rgb(102, 102, 102);
-  font: normal normal normal 13px/17px Helvetica, Arial, sans-serif;
-  outline: rgb(102, 102, 102) none 0px;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    bottom: -10px;
+    background: linear-gradient(to right, transparent 0%, transparent 2%, #fff 2%, #fff 3%, transparent 3%, transparent 5%, #fff 5%, #fff 6%, transparent 6%, transparent 8%, #fff 8%, #fff 9%, transparent 9%, transparent 11%, #fff 11%, #fff 12%, transparent 12%, transparent 14%, #fff 14%, #fff 15%, transparent 15%, transparent 17%, #fff 17%, #fff 18%, transparent 18%, transparent 20%, #fff 20%, #fff 21%, transparent 21%, transparent 23%, #fff 23%, #fff 24%, transparent 24%, transparent 26%, #fff 26%, #fff 27%, transparent 27%, transparent 29%, #fff 29%, #fff 30%, transparent 30%, transparent 32%, #fff 32%, #fff 33%, transparent 33%, transparent 35%, #fff 35%, #fff 36%, transparent 36%, transparent 38%, #fff 38%, #fff 39%, transparent 39%, transparent 41%, #fff 41%, #fff 42%, transparent 42%, transparent 44%, #fff 44%, #fff 45%, transparent 45%, transparent 47%, #fff 47%, #fff 48%, transparent 48%, transparent 50%, #fff 50%, #fff 51%, transparent 51%, transparent 53%, #fff 53%, #fff 54%, transparent 54%, transparent 56%, #fff 56%, #fff 57%, transparent 57%, transparent 59%, #fff 59%, #fff 60%, transparent 60%, transparent 62%, #fff 62%, #fff 63%, transparent 63%, transparent 65%, #fff 65%, #fff 66%, transparent 66%, transparent 68%, #fff 68%, #fff 69%, transparent 69%, transparent 71%, #fff 71%, #fff 72%, transparent 72%, transparent 74%, #fff 74%, #fff 75%, transparent 75%, transparent 77%, #fff 77%, #fff 78%, transparent 78%, transparent 80%, #fff 80%, #fff 81%, transparent 81%, transparent 83%, #fff 83%, #fff 84%, transparent 84%, transparent 86%, #fff 86%, #fff 87%, transparent 87%, transparent 89%, #fff 89%, #fff 90%, transparent 90%, transparent 92%, #fff 92%, #fff 93%, transparent 93%, transparent 95%, #fff 95%, #fff 96%, transparent 96%, transparent 98%, #fff 98%, #fff 99%, transparent 99%, transparent 100%);
 }
 
-.paperclip {
-  position: absolute;
-  top: 10px;
-  right: -20px;
-  width: 57px;
-  height: 28px;
-  background: url("https://static.licdn.com/scds/common/u/images/apps/payments/photo/photo_paperclip_57x28_v1.png")
-    no-repeat;
-  filter: hue-rotate(300deg); /* Change color to pink */
-}
-
-::selection {
-  background: #f31544;
-  color: #fff;
-}
-::moz-selection {
-  background: #f31544;
-  color: #fff;
-}
-h1 {
-  font-size: 1.5em;
-  color: #222;
-}
-h2 {
-  font-size: 0.9em;
-}
+::selection {background: #f31544; color: #FFF;}
+::moz-selection {background: #f31544; color: #FFF;}
+h1 { font-size: 1.4em; color: #222; }
+h2 { font-size: 1.0em; }
 h3 {
-  font-size: 1.2em;
-  font-weight: 300;
-  line-height: 2em;
+    font-size: 1.3em;
+    font-weight: 300;
+    line-height: 2em;
 }
+h5 { font-size: 0.7em;  }
 p {
-  font-size: 0.7em;
-  color: #666;
-  line-height: 1.2em;
+    font-size: .8em;
+    color: #666;
+    line-height: 1.5em;
 }
-#top,
-#mid,
-#bot {
-  border-bottom: 1px solid #eee;
-}
-#top {
-  min-height: 100px;
-}
-#mid {
-  min-height: 80px;
-}
-#bot {
-  min-height: 50px;
-}
+#top, #mid,#bot { border-bottom: 1px solid #EEE; }
+#top { min-height: 100px; }
+#mid { min-height: 80px; } 
+#bot { min-height: 50px; }
 #top .logo {
-  height: 60px;
-  width: 60px;
-  background: url(https://github.com/donghee9/Resource/assets/129722492/a2077840-286b-4612-a40d-9415f9b6e6d8) no-repeat;
-  background-size: 60px 60px;
+    height: 50px;
+    width: 50px;
+    background: url(https://github.com/donghee9/Resource/assets/129722492/a2077840-286b-4612-a40d-9415f9b6e6d8) no-repeat;
+    background-size: 50px 50px;
 }
 .clientlogo {
-  float: left;
-  height: 60px;
-  width: 60px;
-  background: url(http://michaeltruong.ca/images/client.jpg) no-repeat;
-  background-size: 60px 60px;
-  border-radius: 50px;
+    float: left;
+    height: 60px;
+    width: 60px;
+    background: url(http://michaeltruong.ca/images/client.jpg) no-repeat;
+    background-size: 60px 60px;
+    border-radius: 50px;
 }
 .info {
-  display: block;
-  margin-left: 0;
+    display: block;
+    margin-left: 0;
 }
-.title {
-  float: right;
-}
-.title p {
-  text-align: right;
-}
+.title { float: right; }
+.title p { text-align: right; }
 table {
-  width: 100%;
-  border-collapse: collapse;
+    width: 100%;
+    border-collapse: collapse;
 }
-td {
-}
-.tabletitle {
-  font-size: 0.5em;
-  background: #eee;
-}
-.service {
-  border-bottom: 1px solid #eee;
-}
-.item {
-  width: 24mm;
-}
-.itemtext {
-  font-size: 0.5em;
-}
-#legalcopy {
-  margin-top: 5mm;
-}
-a {
-  color: gray;
-  text-decoration: none;
-}
+td { }
+.tabletitle { font-size: .7em; background: #EEE; }
+.service { border-bottom: 3px solid #EEE; }
+.item { width: 45mm; }
+.itemtext { font-size: .8em; }
+#legalcopy { margin-top: 6mm; }
+a { color: gray; text-decoration: none; }
 
 .hoverable:hover {
-  background-color: #f5f5f5;
+    background-color: #ffc0cb; 
+  // background-color: #add8e6;
 }
 
 #content-container {
-  display: none;
-  width: 100%;
+    display: none;
+    width: 100%;
 }
 
 #content-container.active {
-  display: block;
+    display: block;
+}
+
+.service a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
 }
