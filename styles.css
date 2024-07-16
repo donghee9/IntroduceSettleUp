@@ -1,8 +1,8 @@
 #invoice-POS {
     box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
-    padding: 2mm;
+    padding: 3mm;
     margin: 0 auto;
-    width: 80mm;
+    width: 100mm;
     max-width: 100%;
     height: auto;
     max-height: 297mm; /* A4 paper height */
@@ -24,18 +24,18 @@
 
 ::selection {background: #f31544; color: #FFF;}
 ::moz-selection {background: #f31544; color: #FFF;}
-h1 { font-size: 1.2em; color: #222; }
-h2 { font-size: .8em; }
+h1 { font-size: 1.4em; color: #222; }
+h2 { font-size: 1.0em; }
 h3 {
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: 300;
     line-height: 2em;
 }
-h5 { font-size: 0.5em;  }
+h5 { font-size: 0.7em;  }
 p {
-    font-size: .7em;
+    font-size: .8em;
     color: #666;
-    line-height: 1.2em;
+    line-height: 1.5em;
 }
 #top, #mid,#bot { border-bottom: 1px solid #EEE; }
 #top { min-height: 100px; }
@@ -66,16 +66,16 @@ table {
     border-collapse: collapse;
 }
 td { }
-.tabletitle { font-size: .5em; background: #EEE; }
+.tabletitle { font-size: .7em; background: #EEE; }
 .service { border-bottom: 3px solid #EEE; }
-.item { width: 28mm; }
-.itemtext { font-size: .7em; }
-#legalcopy { margin-top: 5mm; }
+.item { width: 45mm; }
+.itemtext { font-size: .8em; }
+#legalcopy { margin-top: 6mm; }
 a { color: gray; text-decoration: none; }
 
 .hoverable:hover {
-    background-color: #ffc0cb; 
-  // background-color: #add8e6;
+    // background-color: #ffc0cb; 
+  background-color: #add8e6;
 }
 
 #content-container {
