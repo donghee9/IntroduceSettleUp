@@ -74,8 +74,7 @@ td { }
 a { color: gray; text-decoration: none; }
 
 .hoverable:hover {
-    // background-color: #ffc0cb; 
-  background-color: #add8e6;
+    background-color: #add8e6;
 }
 
 #content-container {
@@ -93,4 +92,39 @@ a { color: gray; text-decoration: none; }
     height: 100%;
     text-decoration: none;
     color: inherit;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 600px) {
+    #invoice-POS {
+        width: 90mm;
+        padding: 2mm;
+    }
+
+    h1 { font-size: 1.2em; }
+    h2 { font-size: 0.9em; }
+    h3 { font-size: 1.1em; }
+    p { font-size: 0.7em; }
+    h5 { font-size: 0.6em; }
+
+    .item, .itemtext {
+        font-size: 0.6em;
+    }
+}
+
+@media (max-width: 400px) {
+    #invoice-POS {
+        width: 80mm;
+        padding: 1mm;
+    }
+
+    h1 { font-size: 1.1em; }
+    h2 { font-size: 0.8em; }
+    h3 { font-size: 1.0em; }
+    p { font-size: 0.6em; }
+    h5 { font-size: 0.5em; }
+
+    .item, .itemtext {
+        font-size: 0.5em;
+    }
 }
