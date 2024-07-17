@@ -59,11 +59,11 @@ body {
 #invoice-POS {
     box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
     padding: 3mm;
-    margin: 5mm auto 0; /* Leave 5mm space at the top */
+    margin: 2mm auto 0; /* Leave 5mm space at the top */
     width: 100mm;
     max-width: 100%;
     height: auto;
-    max-height: 80vh; /* Limit height to 80% of viewport height */
+    max-height: 90vh; /* Limit height to 80% of viewport height */
     background: rgb(255, 255, 255) url(https://static.licdn.com/scds/common/u/images/apps/payments/textures/texture_paper_304x128_v1.png) repeat scroll 0px 0px / auto padding-box border-box;
     position: relative;
     overflow-y: auto; /* Enable vertical scrolling */
