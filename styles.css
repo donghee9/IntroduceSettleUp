@@ -59,7 +59,7 @@ body {
 #invoice-POS {
     box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
     padding: 3mm;
-    margin: 0 auto;
+    margin: 5mm auto 0; /* Leave 5mm space at the top */
     width: 100mm;
     max-width: 100%;
     height: auto;
