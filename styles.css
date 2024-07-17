@@ -1,3 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+#language-selection.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+#language-selection.top-left {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+}
+
+.button {
+    width: 140px;
+    height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    margin: 0 5px;
+}
+
+.button.active {
+    background-color: #2EE59D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+}
+
+.button:hover {
+    background-color: #2EE59D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
 #invoice-POS {
     box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
     padding: 3mm;
@@ -8,7 +66,7 @@
     max-height: 297mm; /* A4 paper height */
     background: rgb(255, 255, 255) url(https://static.licdn.com/scds/common/u/images/apps/payments/textures/texture_paper_304x128_v1.png) repeat scroll 0px 0px / auto padding-box border-box;
     position: relative;
-    overflow: hidden;
+    overflow-y: auto;
     transition: width 0.3s ease-in-out;
 }
 
@@ -22,8 +80,8 @@
     background: linear-gradient(to right, transparent 0%, transparent 2%, #fff 2%, #fff 3%, transparent 3%, transparent 5%, #fff 5%, #fff 6%, transparent 6%, transparent 8%, #fff 8%, #fff 9%, transparent 9%, transparent 11%, #fff 11%, #fff 12%, transparent 12%, transparent 14%, #fff 14%, #fff 15%, transparent 15%, transparent 17%, #fff 17%, #fff 18%, transparent 18%, transparent 20%, #fff 20%, #fff 21%, transparent 21%, transparent 23%, #fff 23%, #fff 24%, transparent 24%, transparent 26%, #fff 26%, #fff 27%, transparent 27%, transparent 29%, #fff 29%, #fff 30%, transparent 30%, transparent 32%, #fff 32%, #fff 33%, transparent 33%, transparent 35%, #fff 35%, #fff 36%, transparent 36%, transparent 38%, #fff 38%, #fff 39%, transparent 39%, transparent 41%, #fff 41%, #fff 42%, transparent 42%, transparent 44%, #fff 44%, #fff 45%, transparent 45%, transparent 47%, #fff 47%, #fff 48%, transparent 48%, transparent 50%, #fff 50%, #fff 51%, transparent 51%, transparent 53%, #fff 53%, #fff 54%, transparent 54%, transparent 56%, #fff 56%, #fff 57%, transparent 57%, transparent 59%, #fff 59%, #fff 60%, transparent 60%, transparent 62%, #fff 62%, #fff 63%, transparent 63%, transparent 65%, #fff 65%, #fff 66%, transparent 66%, transparent 68%, #fff 68%, #fff 69%, transparent 69%, transparent 71%, #fff 71%, #fff 72%, transparent 72%, transparent 74%, #fff 74%, #fff 75%, transparent 75%, transparent 77%, #fff 77%, #fff 78%, transparent 78%, transparent 80%, #fff 80%, #fff 81%, transparent 81%, transparent 83%, #fff 83%, #fff 84%, transparent 84%, transparent 86%, #fff 86%, #fff 87%, transparent 87%, transparent 89%, #fff 89%, #fff 90%, transparent 90%, transparent 92%, #fff 92%, #fff 93%, transparent 93%, transparent 95%, #fff 95%, #fff 96%, transparent 96%, transparent 98%, #fff 98%, #fff 99%, transparent 99%, transparent 100%);
 }
 
-::selection {background: #f31544; color: #FFF;}
-::moz-selection {background: #f31544; color: #FFF;}
+::selection { background: #2EE59D; color: #FFF; }
+::moz-selection { background: #2EE59D; color: #FFF; }
 h1 { font-size: 1.4em; color: #222; }
 h2 { font-size: 1.0em; }
 h3 {
@@ -31,15 +89,15 @@ h3 {
     font-weight: 300;
     line-height: 2em;
 }
-h5 { font-size: 0.7em;  }
+h5 { font-size: 0.7em; }
 p {
     font-size: .8em;
     color: #666;
     line-height: 1.5em;
 }
-#top, #mid,#bot { border-bottom: 1px solid #EEE; }
+#top, #mid, #bot { border-bottom: 1px solid #EEE; }
 #top { min-height: 100px; }
-#mid { min-height: 80px; } 
+#mid { min-height: 80px; }
 #bot { min-height: 50px; }
 #top .logo {
     height: 50px;
@@ -73,8 +131,9 @@ td { }
 #legalcopy { margin-top: 6mm; }
 a { color: gray; text-decoration: none; }
 
-.hoverable:hover {
-    background-color: #add8e6;
+tr.service.hoverable:hover {
+    background-color: #2EE59D;
+    color: #fff;
 }
 
 #content-container {
@@ -119,7 +178,7 @@ a { color: gray; text-decoration: none; }
     }
 
     h1 { font-size: 1.1em; }
-    h2 { font-size: 0.8em; }
+    h2 { font-size: 0.9em; }
     h3 { font-size: 1.0em; }
     p { font-size: 0.6em; }
     h5 { font-size: 0.5em; }
