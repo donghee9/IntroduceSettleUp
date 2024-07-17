@@ -15,4 +15,3 @@ document.addEventListener('DOMContentLoaded', () => {
         languageSelection.classList.add('top-left');
     });
 });
-
