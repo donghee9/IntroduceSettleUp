@@ -7,107 +7,108 @@
     <script src="script.js" defer></script>
     <title>Invoice</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .item { width: 35mm; }
+    </style>
 </head>
 <body>
-    <div id="invoice-POS">
-        <center id="top">
-            <div class="logo"></div>
-            <div class="info"> 
-                <h1 id="invoice-title">SettleUp BE Receipt</h1>
+    <div id="language-selection" class="center">
+        <button id="github-btn" class="button">Github</button>
+        <button id="how-to-make-btn" class="button">How to Make</button>
+    </div>
+
+    <div id="content-container">
+        <div id="invoice-POS">
+            <center id="top">
+                <div class="logo"></div>
+                <div class="info"> 
+                    <h1 id="invoice-title">SettleUp BE Receipt</h1>
+                </div>
+            </center>
+            <div id="mid">
+                <div class="info" id="contact-info">
+                    <h2>Contact Info</h2>
+                    <p>
+                        Email   : <a href="mailto:seodonghee45@naver.com">seodonghee45@naver.com</a></br>
+                        Github  : <a href="https://github.com/donghee9" target="_blank">https://github.com/donghee9</a></br>
+                        Portfolio : <a href="https://mighty-jaguar-6fc.notion.site/da037640ee174e0d808e999614cea796?pvs=4" target="_blank">https://mighty-jaguar-6fc.notion.site/da037640ee174e0d808e999614cea796?pvs=4</a></br>
+                    </p>
+                    <h5>표 안에 목록을 클릭하시면 자세한 설명이 있습니다</h5>
+                </div>
             </div>
-        </center>
-        <div id="mid">
-            <div class="info" id="contact-info">
-                <h2>Contact Info</h2>
-                <p>
-                    Email   : <a href="mailto:seodonghee45@naver.com">seodonghee45@naver.com</a></br>
-                    Github  : <a href="https://github.com/donghee9" target="_blank">https://github.com/donghee9</a></br>
-                    Portfolie : <a href="https://mighty-jaguar-6fc.notion.site/da037640ee174e0d808e999614cea796?pvs=4" target="_blank">https://mighty-jaguar-6fc.notion.site/da037640ee174e0d808e999614cea796?pvs=4</a></br>
-                </p>
-                <h5>표 안에 목록을 클릭하시면 자세한 설명이 있습니다</h5>
-            </div>
-        </div>
-        
-        <div id="bot">
-            <div id="table">
-                <table>
-                    <tr class="tabletitle">
-                        <td class="item"><h2>Content</h2></td>
-                        <td class="Hours"><h2>Qty</h2></td>
-                        <td class="Rate"><h2>Sub Total</h2></td>
-                    </tr>
+            
+            <div id="bot">
+                <div id="table">
+                    <table>
+                        <tr class="tabletitle">
+                            <td class="item"><h2>Content</h2></td>
+                            <td class="Rate"><h2>Brief Description</h2></td>
+                        </tr>
 
-                    <tr class="service hoverable">
-                        <td class="tableitem"><a href="https://mighty-jaguar-6fc.notion.site/aea3c33908894cf081cad3b56661fbe7?pvs=4" target="_blank"><p class="itemtext"><strong>백엔드 기술 스택</strong></p></a></td>
-                        <td class="tableitem"><a href="https://mighty-jaguar-6fc.notion.site/aea3c33908894cf081cad3b56661fbe7?pvs=4" target="_blank"><p class="itemtext">30</p></a></td>
-                        <td class="tableitem"><a href="https://mighty-jaguar-6fc.notion.site/aea3c33908894cf081cad3b56661fbe7?pvs=4" target="_blank"><p class="itemtext">$30.00</p></a></td>
-                    </tr>
+                        <tr class="service hoverable">
+                            <td class="tableitem"><p class="itemtext"><strong>백엔드 기술 스택</strong></p></td>
+                            <td class="tableitem"><p class="itemtext">30가지 기술 스택과 선택이유</p></td>
+                        </tr>
 
-                    <tr class="service hoverable">
-                        <td class="tableitem"><a href="https://mighty-jaguar-6fc.notion.site/bba5c30c19a04bd2a4a8a809a6c8833c?pvs=4" target="_blank"><p class="itemtext"><strong>서비스 소개</strong></p></a></td>
-                        <td class="tableitem"><a href="https://mighty-jaguar-6fc.notion.site/bba5c30c19a04bd2a4a8a809a6c8833c?pvs=4" target="_blank"><p class="itemtext">2</p></a></td>
-                        <td class="tableitem"><a href="https://mighty-jaguar-6fc.notion.site/bba5c30c19a04bd2a4a8a809a6c8833c?pvs=4" target="_blank"><p class="itemtext">$2.00</p></a></td>
-                    </tr>
+                        <tr class="service hoverable">
+                            <td class="tableitem"><p class="itemtext"><strong>서비스 소개</strong></p></td>
+                            <td class="tableitem"><p class="itemtext">서비스 목적과 주요기능</p></td>
+                        </tr>
 
-                    <tr class="service hoverable">
-                        <td class="tableitem"><a href="https://mighty-jaguar-6fc.notion.site/2ab1e685ab71449e816461dbde4ef41c?pvs=4" target="_blank"><p class="itemtext"><strong>구조설계</strong></p></a></td>
-                        <td class="tableitem"><a href="https://mighty-jaguar-6fc.notion.site/2ab1e685ab71449e816461dbde4ef41c?pvs=4" target="_blank"><p class="itemtext">2</p></a></td>
-                        <td class="tableitem"><a href="https://mighty-jaguar-6fc.notion.site/2ab1e685ab71449e816461dbde4ef41c?pvs=4" target="_blank"><p class="itemtext">$2.00</p></a></td>
-                    </tr>
+                        <tr class="service hoverable">
+                            <td class="tableitem"><p class="itemtext"><strong>구조설계</strong></p></td>
+                            <td class="tableitem"><p class="itemtext">서버 아키텍처</p></td>
+                        </tr>
 
-                    <tr class="service hoverable">
-                        <td class="tableitem"><a href="https://github.com/Settle-Up/settle-up-server" target="_blank"><p class="itemtext"><strong>코드 보기</strong></p></a></td>
-                        <td class="tableitem"><a href="https://github.com/Settle-Up/settle-up-server" target="_blank"><p class="itemtext">22,324</p></a></td>
-                        <td class="tableitem"><a href="https://github.com/Settle-Up/settle-up-server" target="_blank"><p class="itemtext">$22,324.00</p></a></td>
-                    </tr>
+                        <tr class="service hoverable">
+                            <td class="tableitem"><p class="itemtext"><strong>코드 보기</strong></p></td>
+                            <td class="tableitem"><p class="itemtext">깃허브를 통해 코드보기</p></td>
+                        </tr>
 
-                    <tr class="service hoverable">
-                        <td class="tableitem"><a href="https://mighty-jaguar-6fc.notion.site/e9c13822588648c6837290b581f962ab?pvs=4" target="_blank"><p class="itemtext"><strong>구현기능 설명</strong></p></a></td>
-                        <td class="tableitem"><a href="https://mighty-jaguar-6fc.notion.site/e9c13822588648c6837290b581f962ab?pvs=4" target="_blank"><p class="itemtext">21</p></a></td>
-                        <td class="tableitem"><a href="https://mighty-jaguar-6fc.notion.site/e9c13822588648c6837290b581f962ab?pvs=4" target="_blank"><p class="itemtext">$21.00</p></a></td>
-                    </tr>
+                        <tr class="service hoverable">
+                            <td class="tableitem"><p class="itemtext"><strong>구현기능 설명</strong></p></td>
+                            <td class="tableitem"><p class="itemtext">21가지 기능과 목적 구현시 고려사항</p></td>
+                        </tr>
 
-                    <tr class="service hoverable">
-                        <td class="tableitem"><a href="https://mighty-jaguar-6fc.notion.site/44b67fc5d46a40d9ab25a821de645ffe?pvs=4" target="_blank"><p class="itemtext"><strong>핵심 알고리즘 설명</strong></p></a></td>
-                        <td class="tableitem"><a href="https://mighty-jaguar-6fc.notion.site/44b67fc5d46a40d9ab25a821de645ffe?pvs=4" target="_blank"><p class="itemtext">4</p></a></td>
-                        <td class="tableitem"><a href="https://mighty-jaguar-6fc.notion.site/44b67fc5d46a40d9ab25a821de645ffe?pvs=4" target="_blank"><p class="itemtext">$4.00</p></a></td>
-                    </tr>
+                        <tr class="service hoverable">
+                            <td class="tableitem"><p class="itemtext"><strong>핵심 알고리즘 설명</strong></p></td>
+                            <td class="tableitem"><p class="itemtext">비용최적화를 위한 4가지 알고리즘</p></td>
+                        </tr>
 
-                    <tr class="service hoverable">
-                        <td class="tableitem"><a href="https://mighty-jaguar-6fc.notion.site/ee8a65eb79224703be49b07ad620fad7?pvs=4" target="_blank"><p class="itemtext"><strong>데이터베이스 구조</strong></p></a></td>
-                        <td class="tableitem"><a href="https://mighty-jaguar-6fc.notion.site/ee8a65eb79224703be49b07ad620fad7?pvs=4" target="_blank"><p class="itemtext">1</p></a></td>
-                        <td class="tableitem"><a href="https://mighty-jaguar-6fc.notion.site/ee8a65eb79224703be49b07ad620fad7?pvs=4" target="_blank"><p class="itemtext">$1.00</p></a></td>
-                    </tr>
+                        <tr class="service hoverable">
+                            <td class="tableitem"><p class="itemtext"><strong>데이터베이스 구조</strong></p></td>
+                            <td class="tableitem"><p class="itemtext">데이터베이스구조와 설계이유</p></td>
+                        </tr>
 
-                    <tr class="service hoverable">
-                        <td class="tableitem"><a href="https://mighty-jaguar-6fc.notion.site/f4f2ce9d8cff4c4a95f02cf1b303c261?pvs=4" target="_blank"><p class="itemtext"><strong>보안</strong></p></a></td>
-                        <td class="tableitem"><a href="https://mighty-jaguar-6fc.notion.site/f4f2ce9d8cff4c4a95f02cf1b303c261?pvs=4" target="_blank"><p class="itemtext">4</p></a></td>
-                        <td class="tableitem"><a href="https://mighty-jaguar-6fc.notion.site/f4f2ce9d8cff4c4a95f02cf1b303c261?pvs=4" target="_blank"><p class="itemtext">$4.00</p></a></td>
-                    </tr>
+                        <tr class="service hoverable">
+                            <td class="tableitem"><p class="itemtext"><strong>보안</strong></p></td>
+                            <td class="tableitem"><p class="itemtext">프로젝트에 접목한 보안</p></td>
+                        </tr>
 
-                    <tr class="service hoverable">
-                        <td class="tableitem"><a href="https://mighty-jaguar-6fc.notion.site/CI-CD-27c41a1e5f054ccf8342b0cccafe28ff?pvs=4" target="_blank"><p class="itemtext"><strong>CI/CD</strong></p></a></td>
-                        <td class="tableitem"><a href="https://mighty-jaguar-6fc.notion.site/CI-CD-27c41a1e5f054ccf8342b0cccafe28ff?pvs=4" target="_blank"><p class="itemtext">6</p></a></td>
-                        <td class="tableitem"><a href="https://mighty-jaguar-6fc.notion.site/CI-CD-27c41a1e5f054ccf8342b0cccafe28ff?pvs=4" target="_blank"><p class="itemtext">$6.00</p></a></td>
-                    </tr>
+                        <tr class="service hoverable">
+                            <td class="tableitem"><p class="itemtext"><strong>CI/CD</strong></p></td>
+                            <td class="tableitem"><p class="itemtext">CI/CD 도입기</p></td>
+                        </tr>
 
-                    <tr class="tabletitle">
-                        <td></td>
-                        <td class="Rate"><h2>tax</h2></td>
-                        <td class="payment"><h2>$0.00</h2></td>
-                    </tr>
+                        <tr class="tabletitle">
+                            <td class="Rate"><h2>Project Duration</h2></td>
+                            <td class="payment"><h2>February 19th to April 22nd</h2></td>
+                        </tr>
+                        <tr class="tabletitle">
+                            <td class="Rate"><h2>Refactoring Period</h2></td>
+                            <td class="payment"><h2>June 1st to July 12th</h2></td>
+                        </tr>
+                        <tr class="tabletitle">
+                            <td class="Rate"><h2>Total Project Days</h2></td>
+                            <td class="payment"><h2>105 days</h2></td>
+                        </tr>
+                    </table>
+                </div>
 
-                    <tr class="tabletitle">
-                        <td></td>
-                        <td class="Rate"><h2>Total</h2></td>
-                        <td class="payment"><h2>$22,394.00</h2></td>
-                    </tr>
-                </table>
-            </div>
-
-            <div id="legalcopy">
-                <p class="legal"><strong>Thank you for your interest in the backend development process!</strong><p> I've worked diligently for 142 days, and I want to express my gratitude to the frontend team member who collaborated with me.
-                <strong><p>We hope our service can be a tool that simplifies everyday hassles for you.</strong></p>
+                <div id="legalcopy">
+                    <p class="legal"><strong>Thank you for your interest in the backend development process!</strong><p> I've worked diligently for 142 days, and I want to express my gratitude to the frontend team member who collaborated with me.
+                    <strong><p>We hope our service can be a tool that simplifies everyday hassles for you.</strong></p>
+                </div>
             </div>
         </div>
     </div>
