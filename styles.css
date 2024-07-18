@@ -7,8 +7,8 @@ body {
     height: 100vh;
     margin: 0;
     position: relative;
-    overflow-x: hidden;
-    padding-top: 5mm; 
+    overflow-x: hidden; /* Ensure no horizontal scroll */
+    padding-top: 5mm; /* Add padding at the top */
 }
 
 #language-selection.center {
@@ -21,7 +21,7 @@ body {
 
 #language-selection.top-left {
     position: absolute;
-    top: 5mm; 
+    top: 5mm; /* Adjust to position 5mm from the top */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -29,11 +29,11 @@ body {
 
 #language-selection.above-invoice {
     position: absolute;
-    top: 5mm; 
+    top: 5mm; /* Adjust to position 5mm from the top */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    margin-bottom: 10mm; 
+    margin-bottom: 10mm; /* 3mm space between buttons and invoice */
 }
 
 .button {
@@ -71,14 +71,14 @@ body {
 #invoice-POS {
     box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
     padding: 3mm;
-    margin: 15mm auto 0; 
+    margin: 15mm auto 0; /* Leave 3mm space below the buttons */
     width: 100mm;
     max-width: 100%;
     height: auto;
-    max-height: calc(100vh - 58px - 3mm);
+    max-height: calc(100vh - 58px - 3mm); /* 58px for buttons, 3mm space */
     background: rgb(255, 255, 255) url(https://static.licdn.com/scds/common/u/images/apps/payments/textures/texture_paper_304x128_v1.png) repeat scroll 0px 0px / auto padding-box border-box;
     position: relative;
-    overflow-y: auto; 
+    overflow-y: auto; /* Enable vertical scrolling */
     transition: width 0.3s ease-in-out;
 }
 
@@ -165,12 +165,8 @@ tr.service.hoverable:hover {
     color: inherit;
 }
 
-
+/* Media Queries for responsiveness */
 @media (max-width: 600px) {
-    #language-selection {
-        flex-direction: column; 
-    }
-
     #invoice-POS {
         width: 90mm;
         padding: 2mm;
