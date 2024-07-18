@@ -17,6 +17,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
+    flex-direction: row; /* Ensure horizontal alignment */
 }
 
 #language-selection.top-left {
@@ -25,6 +26,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
+    flex-direction: row; /* Ensure horizontal alignment */
 }
 
 #language-selection.above-invoice {
@@ -33,6 +35,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
+    flex-direction: row; /* Ensure horizontal alignment */
     margin-bottom: 10mm; /* 3mm space between buttons and invoice */
 }
 
