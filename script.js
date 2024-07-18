@@ -1,3 +1,5 @@
+import axiosInstance from "./axiosConfig";
+
 document.addEventListener('DOMContentLoaded', () => {
     const githubBtn = document.getElementById('github-btn');
     const howToMakeBtn = document.getElementById('how-to-make-btn');
@@ -9,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const reportIssueForm = document.getElementById('report-issue-form');
     const waitingMessage = document.getElementById('waiting-message');
     const feedbackMessage = document.getElementById('feedback-message');
+    const goBackBtn = document.getElementById('go-back-btn');
+    const goBackContainer = document.getElementById('go-back-container');
 
     githubBtn.addEventListener('click', () => {
         window.location.href = 'https://github.com/Settle-Up/settle-up-server';
@@ -16,9 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     howToMakeBtn.addEventListener('click', () => {
         contentContainer.classList.add('active');
-        howToMakeBtn.classList.add('active');
-        languageSelection.classList.remove('center');
-        languageSelection.classList.add('above-invoice'); // Position buttons above the invoice
+        goBackContainer.classList.add('active');
+        languageSelection.classList.add('hidden');
+    });
+
+    goBackBtn.addEventListener('click', () => {
+        contentContainer.classList.remove('active');
+        goBackContainer.classList.remove('active');
+        languageSelection.classList.remove('hidden');
     });
 
     reportIssueBtn.addEventListener('click', () => {
@@ -39,20 +48,27 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         const issueLocation = document.getElementById('issue-location').value;
         const issueDescription = document.getElementById('issue-description').value;
+        const replyEmailAddress = document.getElementById('reply-email-address').value;
 
         waitingMessage.style.display = 'block';
 
-        setTimeout(() => {
-            const mailtoLink = `mailto:seodonghee456@gmail.com?subject=Issue Report&body=Where did the issue occur?: ${issueLocation}%0D%0A%0D%0AHow would you like it to be improved?: ${issueDescription}`;
-            window.location.href = mailtoLink;
+        axiosInstance.post('/user/feedBack/email', {
+            issueLocation,
+            issueDescription,
+            replyEmailAddress
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
 
+        setTimeout(() => {
             waitingMessage.style.display = 'none';
             feedbackMessage.style.display = 'block';
-        }, 2000); // Simulate a delay for sending email
+        }, 3000); // Display the feedback message after 3 seconds
 
         setTimeout(() => {
             feedbackMessage.style.display = 'none';
             reportIssueContainer.style.display = 'none';
-        }, 5000); // Display thank you message for 5 seconds
+        }, 5000); // Hide the feedback message and modal after 5 seconds
     });
 });
