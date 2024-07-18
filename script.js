@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const goToBackBtn = document.getElementById('go-to-back-btn');
 
     const axiosInstance = axios.create({
-        baseURL: "https://9cea-125-132-224-129.ngrok-free.app",
+        baseURL: "https://server2a.settleup.store",
         withCredentials: true,
     });
 
