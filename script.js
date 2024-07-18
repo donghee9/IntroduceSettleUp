@@ -11,16 +11,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const feedbackMessage = document.getElementById('feedback-message');
     const goToBackBtn = document.getElementById('go-to-back-btn');
 
-    // const axiosInstance = axios.create({
-    //     baseURL: "https://server2a.settleup.store/",
-    //     withCredentials: true,
-    // });
-
-
-        const axiosInstance = axios.create({
-        baseURL: "https://ddfb-125-132-224-129.ngrok-free.app",
+    const axiosInstance = axios.create({
+        baseURL: "https://server2a.settleup.store/",
         withCredentials: true,
     });
+
+
+    //     const axiosInstance = axios.create({
+    //     baseURL: "https://ddfb-125-132-224-129.ngrok-free.app",
+    //     withCredentials: true,
+    // });
 
     axiosInstance.interceptors.request.use(
         (config) => {
