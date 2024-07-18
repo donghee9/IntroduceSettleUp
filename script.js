@@ -1,3 +1,4 @@
+// script.js
 import axiosInstance from "./axiosConfig";
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -11,8 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const reportIssueForm = document.getElementById('report-issue-form');
     const waitingMessage = document.getElementById('waiting-message');
     const feedbackMessage = document.getElementById('feedback-message');
-    const goBackBtn = document.getElementById('go-back-btn');
-    const goBackContainer = document.getElementById('go-back-container');
 
     githubBtn.addEventListener('click', () => {
         window.location.href = 'https://github.com/Settle-Up/settle-up-server';
@@ -20,14 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     howToMakeBtn.addEventListener('click', () => {
         contentContainer.classList.add('active');
-        goBackContainer.classList.add('active');
         languageSelection.classList.add('hidden');
-    });
-
-    goBackBtn.addEventListener('click', () => {
-        contentContainer.classList.remove('active');
-        goBackContainer.classList.remove('active');
-        languageSelection.classList.remove('hidden');
     });
 
     reportIssueBtn.addEventListener('click', () => {
