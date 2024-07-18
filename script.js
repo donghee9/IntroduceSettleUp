@@ -43,9 +43,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             await axios.post('https://8899-125-132-224-129.ngrok-free.app/users/feedback/email', {
-                issueLocation: encodeURIComponent(issueLocation),
-                issueDescription: encodeURIComponent(issueDescription),
-                replyEmailAddress: encodeURIComponent(replyEmailAddress)
+                issueLocation,
+                issueDescription,
+                replyEmailAddress
+            }, {
+                headers: {
+                    'Content-Type': 'application/json; charset=UTF-8'
+                }
             });
         } catch (error) {
             console.error('Error:', error);
