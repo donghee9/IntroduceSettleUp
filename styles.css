@@ -258,9 +258,16 @@ label {
 }
 
 input, textarea {
-    width: 85%;
+    width: 100%;
     padding: 10px;
     margin: 5px 0 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+#waiting-message {
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    margin-top: 10px;
 }
