@@ -14,7 +14,7 @@ axiosInstance.interceptors.request.use(
     config.headers["ngrok-skip-browser-warning"] = "true"; // This can be removed later
 
     const url = config.url || "";
-    const excludeEndpoints = ["/login", "/auth/login/social/kakao"];
+    const excludeEndpoints = ["/login", "/auth/login/social/kakao","/user/feedBack/email"];
 
     // Check if the endpoint is not in the exclude list
     if (!excludeEndpoints.includes(url)) {
