@@ -11,6 +11,7 @@
 <body>
     <div id="language-selection" class="center">
         <button id="github-btn" class="button">Github</button>
+        <button id="report-issue-btn" class="button">Send Feedback</button>
         <button id="how-to-make-btn" class="button">How to Make</button>
     </div>
 
@@ -103,10 +104,25 @@
                 </div>
 
                 <div id="legalcopy">
-                    <p class="legal"><strong>Thank you for your interest in the backend development process!</strong><p> I've worked diligently for 105 days, and I want to express my gratitude to the frontend team member who collaborated with me.
+                    <p class="legal"><strong>Thank you for your interest in the backend development process!</strong><p> I've worked diligently for 142 days, and I want to express my gratitude to the frontend team member who collaborated with me.
                     <strong><p>We hope our service can be a tool that simplifies everyday hassles for you.</strong></p>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div id="report-issue-container" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Send FeedBack</h2>
+            <form id="report-issue-form">
+                <label for="issue-location">Where did the issue occur? / 어디서 발생한 이슈인가요?</label>
+                <input type="text" id="issue-location" name="issueLocation" required>
+                <label for="issue-description">How would you like it to be improved?/ 어떻게 개선하면 좋을까요?</label>
+                <textarea id="issue-description" name="issueDescription" required></textarea>
+                <button type="submit" class="button">Email Send</button>
+            </form>
+            <p id="feedback-message" style="display: none; color: green;">Thank you for your valuable feedback <br>소중한 피드백 감사드립니다</p>
         </div>
     </div>
 </body>
