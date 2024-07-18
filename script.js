@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         (config) => {
             config.headers["ngrok-skip-browser-warning"] = "true";
             const url = config.url || "";
-            const excludeEndpoints = ["/login", "/auth/login/social/kakao","/user/feedback/email"];
+            const excludeEndpoints = ["/login", "/auth/login/social/kakao","/users/feedback/email"];
 
             if (!excludeEndpoints.includes(url)) {
                 const accessToken = sessionStorage.getItem("accessToken");
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         waitingMessage.style.display = 'block';
 
-        axiosInstance.post('/user/feedback/email', {
+        axiosInstance.post('/users/feedback/email', {
             issueLocation,
             issueDescription,
             replyEmailAddress
