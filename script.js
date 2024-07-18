@@ -11,8 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const feedbackMessage = document.getElementById('feedback-message');
     const goToBackBtn = document.getElementById('go-to-back-btn');
 
-    const axiosInstance = axios.create({
-        baseURL: "https://server2a.settleup.store/",
+    // const axiosInstance = axios.create({
+    //     baseURL: "https://server2a.settleup.store/",
+    //     withCredentials: true,
+    // });
+
+
+        const axiosInstance = axios.create({
+        baseURL: "https://ddfb-125-132-224-129.ngrok-free.app",
         withCredentials: true,
     });
 
@@ -77,13 +83,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const issueLocation = document.getElementById('issue-location').value;
         const issueDescription = document.getElementById('issue-description').value;
         const replyEmailAddress = document.getElementById('reply-email-address').value;
+        const serverOrClient = true; // 서버는 true
 
         waitingMessage.style.display = 'block';
 
         axiosInstance.post('/users/feedback/email', {
             issueLocation,
             issueDescription,
-            replyEmailAddress
+            replyEmailAddress,
+            serverOrClient 
         })
         .catch(error => {
             console.error('Error:', error);
