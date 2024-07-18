@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const goToBackBtn = document.getElementById('go-to-back-btn');
 
     const axiosInstance = axios.create({
-        baseURL: "https://server2a.settleup.store",
+        baseURL: "https://server2a.settleup.store/",
         withCredentials: true,
     });
 
