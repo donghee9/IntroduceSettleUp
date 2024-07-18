@@ -146,6 +146,10 @@ td { }
 #legalcopy { margin-top: 6mm; }
 a { color: gray; text-decoration: none; }
 
+a:hover {
+    color: #2EE59D; /* Change color to green when hovered */
+}
+
 tr.service.hoverable:hover {
     background-color: #2EE59D;
     color: #fff;
