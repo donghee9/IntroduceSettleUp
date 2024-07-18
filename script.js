@@ -12,6 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
         contentContainer.classList.add('active');
         howToMakeBtn.classList.add('active');
         languageSelection.classList.remove('center');
-        languageSelection.classList.add('top-left');
+        languageSelection.classList.add('above-invoice'); // Position buttons above the invoice
     });
 });
