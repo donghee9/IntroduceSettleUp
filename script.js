@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const reportIssueContainer = document.getElementById('report-issue-container');
     const closeButton = document.querySelector('.close-button');
     const reportIssueForm = document.getElementById('report-issue-form');
+    const waitingMessage = document.getElementById('waiting-message');
     const feedbackMessage = document.getElementById('feedback-message');
 
     githubBtn.addEventListener('click', () => {
@@ -38,15 +39,20 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         const issueLocation = document.getElementById('issue-location').value;
         const issueDescription = document.getElementById('issue-description').value;
-        
-        const mailtoLink = `mailto:seodonghee456@gmail.com?subject=Issue Report&body=Where did the issue occur?: ${issueLocation}%0D%0A%0D%0AHow would you like it to be improved?: ${issueDescription}`;
-        
-        window.location.href = mailtoLink;
 
-        reportIssueContainer.style.display = 'none';
-        feedbackMessage.style.display = 'block';
+        waitingMessage.style.display = 'block';
+
+        setTimeout(() => {
+            const mailtoLink = `mailto:seodonghee456@gmail.com?subject=Issue Report&body=Where did the issue occur?: ${issueLocation}%0D%0A%0D%0AHow would you like it to be improved?: ${issueDescription}`;
+            window.location.href = mailtoLink;
+
+            waitingMessage.style.display = 'none';
+            feedbackMessage.style.display = 'block';
+        }, 2000); // Simulate a delay for sending email
+
         setTimeout(() => {
             feedbackMessage.style.display = 'none';
-        }, 5000);
+            reportIssueContainer.style.display = 'none';
+        }, 5000); // Display thank you message for 5 seconds
     });
 });
