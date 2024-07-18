@@ -1,6 +1,3 @@
-// script.js
-import axiosInstance from "./axiosConfig";
-
 document.addEventListener('DOMContentLoaded', () => {
     const githubBtn = document.getElementById('github-btn');
     const howToMakeBtn = document.getElementById('how-to-make-btn');
@@ -12,6 +9,38 @@ document.addEventListener('DOMContentLoaded', () => {
     const reportIssueForm = document.getElementById('report-issue-form');
     const waitingMessage = document.getElementById('waiting-message');
     const feedbackMessage = document.getElementById('feedback-message');
+    const goToBackBtn = document.getElementById('go-to-back-btn');
+
+    const axiosInstance = axios.create({
+        baseURL: "https://8899-125-132-224-129.ngrok-free.app",
+        withCredentials: true,
+    });
+
+    axiosInstance.interceptors.request.use(
+        (config) => {
+            config.headers["ngrok-skip-browser-warning"] = "true";
+            const url = config.url || "";
+            const excludeEndpoints = ["/login", "/auth/login/social/kakao","/user/feedback/email"];
+
+            if (!excludeEndpoints.includes(url)) {
+                const accessToken = sessionStorage.getItem("accessToken");
+                if (accessToken) {
+                    config.headers.Authorization = `Bearer ${accessToken}`;
+                }
+
+                if (config.params) {
+                    for (const key in config.params) {
+                        if (config.params.hasOwnProperty(key) && config.params[key] != null) {
+                            config.params[key] = encodeURIComponent(config.params[key]);
+                        }
+                    }
+                }
+            }
+
+            return config;
+        },
+        (error) => Promise.reject(error)
+    );
 
     githubBtn.addEventListener('click', () => {
         window.location.href = 'https://github.com/Settle-Up/settle-up-server';
@@ -19,7 +48,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     howToMakeBtn.addEventListener('click', () => {
         contentContainer.classList.add('active');
-        languageSelection.classList.add('hidden');
+        languageSelection.style.display = 'none';
+        goToBackBtn.style.display = 'block';
+    });
+
+    goToBackBtn.addEventListener('click', () => {
+        contentContainer.classList.remove('active');
+        languageSelection.style.display = 'flex';
+        goToBackBtn.style.display = 'none';
     });
 
     reportIssueBtn.addEventListener('click', () => {
@@ -44,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         waitingMessage.style.display = 'block';
 
-        axiosInstance.post('/user/feedBack/email', {
+        axiosInstance.post('/user/feedback/email', {
             issueLocation,
             issueDescription,
             replyEmailAddress
